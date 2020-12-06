@@ -1,0 +1,18 @@
+<div class="animated fadeIn container">
+    <div class="card w-100">
+        <div class="card-header">
+            <div class="avatar">
+                <img src="https://mozilla.github.io/pdf.js/images/logo.svg">
+            </div>
+            <div class="name">PDF.js</div>
+            <div class="date">A general-purpose, web standards-based platform for parsing and rendering PDFs.</div>
+        </div>
+        <div class="card-content p-2">
+            <button (click)="print()" nz-button>Print</button>
+            <hr>
+            <div style="height: 720px;">
+                <ng2-pdfjs-viewer pdfSrc="http://asp.demosoft.me/api/files/fileName/ImageData.pdf"></ng2-pdfjs-viewer>
+            </div>
+        </div>
+    </div>
+</div>

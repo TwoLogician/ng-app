@@ -1,0 +1,12 @@
+<nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+    <input (change)="dateStringChange($event)" mask="d0/M0/0000" [(ngModel)]="dateString" nz-input>
+</nz-input-group>
+<ng-template #suffixIconButton>
+    <mat-form-field class="example-full-width" style="height: 0; width: 0;">
+        <input [matDatepicker]="picker" matInput [(ngModel)]="date" (ngModelChange)="onDateChange($event)" [ngModelOptions]="ngModelOptions">
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button (click)="picker.open()" nz-button nzType="primary" nzSearch>
+        <i nz-icon nzType="calendar"></i>
+    </button>
+</ng-template>

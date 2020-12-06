@@ -1,0 +1,52 @@
+<div class="bg-green fg-white" data-role="appbar" data-expand-point="md">
+  <a class="brand no-hover" routerLink="/">
+    <span style="width: 40px; height: 40px; line-height: 40px" class="text-center border bd-white">
+      N<sup>G</sup>
+    </span>
+  </a>
+
+  <ul class="app-bar-menu">
+    <!-- <li>
+      <a class="bd-white dropdown-toggle">Products</a>
+      <ul class="d-menu" data-role="dropdown">
+        <li>
+          <a>Windows 10</a>
+        </li>
+        <li>
+          <a>Office 365</a>
+        </li>
+        <li class="divider bg-lightGray"></li>
+        <li>
+          <a>Skype</a>
+        </li>
+      </ul>
+    </li> -->
+    <li>
+      <a routerLink="/camera">Camera</a>
+    </li>
+    <li>
+      <a routerLink="/date-picker">DatePicker</a>
+    </li>
+    <li>
+      <a routerLink="/inputs">Inputs</a>
+    </li>
+    <!-- <li *ngIf="!isLoggedIn">
+      <a (click)="keycloakLogin()">Keycloak (Login)</a>
+    </li>
+    <li *ngIf="isLoggedIn">
+      <a (click)="keycloakLogout()">Keycloak (Logout)</a>
+    </li> -->
+    <li>
+      <a id="object-explore-a" routerLink="/object-explore">Object Explore</a>
+    </li>
+    <li>
+      <a routerLink="/pdfjs">PDF.js</a>
+    </li>
+    <li>
+      <a routerLink="/rich-text-editor">Rich Text Editor</a>
+    </li>
+  </ul>
+</div>
+<div class="p-4" style="padding-top: 67px !important;">
+  <router-outlet></router-outlet>
+</div>

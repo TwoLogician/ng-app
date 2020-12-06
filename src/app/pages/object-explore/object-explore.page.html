@@ -1,0 +1,46 @@
+<div class="animated fadeIn container">
+    <div class="card w-100">
+        <div class="card-header">
+            <div class="avatar">
+                <img src="https://image.flaticon.com/icons/svg/2421/2421254.svg">
+            </div>
+            <div class="name">Object Explore</div>
+            <div class="date">Object Explore provides a hierarchical user interface to view the objects in each instance of REST API</div>
+        </div>
+        <div class="card-content p-2">
+            <form>
+                <nz-input-group nzSearch [nzAddOnAfter]="suffixButton">
+                    <input id="url-input" [(ngModel)]="url" [ngModelOptions]="ngModelOptions" nz-input placeholder="https://asp.demosoft.me/api/values" type="text">
+                </nz-input-group>
+                <ng-template #suffixButton>
+                    <button (click)="submit()" id="get-button" nz-button nzType="primary" nzSearch>Get</button>
+                </ng-template>
+            </form>
+            <hr>
+            <div nz-row nzGutter="8">
+                <div nz-col nzMd="12"></div>
+                <div nz-col nzMd="12">
+                    <nz-input-group [nzSuffix]="suffixIconSearch">
+                        <input [(ngModel)]="keyword" (ngModelChange)="search()" [ngModelOptions]="ngModelOptions" nz-input placeholder="input search text">
+                    </nz-input-group>
+                    <ng-template #suffixIconSearch>
+                        <i nz-icon nzType="search"></i>
+                    </ng-template>
+                </div>
+            </div>
+            <hr>
+            <nz-table #nzTable [nzData]="rs" [nzLoading]="loading" [nzScroll]="{ x: '1366px' }">
+                <thead>
+                    <tr>
+                        <th class="text-center" *ngFor="let column of columns">{{column}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="animated fadeIn" *ngFor="let data of nzTable.data">
+                        <td class="text-center" *ngFor="let column of columns" style="white-space: nowrap;">{{data[column]}}</td>
+                    </tr>
+                </tbody>
+            </nz-table>
+        </div>
+    </div>
+</div>

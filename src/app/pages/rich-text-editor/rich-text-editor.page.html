@@ -1,0 +1,16 @@
+<div class="animated fadeIn container">
+    <div class="card w-100">
+        <div class="card-header">
+            <div class="avatar">
+                <img src="https://avatars3.githubusercontent.com/u/7966884?s=200&v=4">
+            </div>
+            <div class="name">Rich Text Editor</div>
+            <div class="date">Beautiful Javascript web editor that's easy to integrate for developers and your users will simply fall in love with its clean design.</div>
+        </div>
+        <div class="card-content p-2">
+            <div froalaEditor (froalaModelChange)="htmlContentChange($event)" [(froalaModel)]="htmlContent"></div>
+            <hr>
+            <input nz-input (click)="copy()" id="html-value-text" [(ngModel)]="htmlValue">
+        </div>
+    </div>
+</div>

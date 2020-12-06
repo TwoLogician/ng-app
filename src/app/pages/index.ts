@@ -1,0 +1,7 @@
+export { CameraPage } from "./camera/camera.page"
+export { DatePickerPage } from "./date-picker/date-picker.page"
+export { HomePage } from "./home/home.page"
+export { InputsPage } from "./inputs/inputs.page"
+export { ObjectExplorePage } from "./object-explore/object-explore.page"
+export { PdfJsPage } from "./pdfjs/pdfjs.page"
+export { RichTextEditorPage } from "./rich-text-editor/rich-text-editor.page"
